@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    font-family: 'Futura', sans-serif;
+    color: #ffffff;
+    background-color: #2A2A2A;
+  }
+
+
+/* Restrict animations to the home page */
+#homescreen h1, 
+#homescreen p, 
+#homescreen .button {
+    opacity: 0;
+    transform: translateY(50px); /* Start slightly below */
+}
+
+/* Remove overflow hidden globally */
+#homescreen {
+    overflow: hidden;
+}
+
+
+
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+}
+
+a.button {
+    display: inline-block; /* Makes it behave like a button */
+    background-color: transparent; /* Transparent for minimalism */
+    color: #ffffff; /* White text */
+    text-decoration: none; /* Remove underline */
+    font-family: 'Futura', sans-serif; /* Use Futura or fallback */
+    font-size: 16px; /* Text size */
+    padding: 10px 20px; /* Adjust padding for a sleek size */
+    border: 2px solid #ffffff; /* Thin white border for definition */
+    border-radius: 6px; /* Subtle rounding for modern look */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth hover effects */
+}
+
+a.button:hover {
+    background-color: #ffffff; /* White background on hover */
+    color: #2A2A2A; /* Dark text for contrast */
+    border-color: #49bf9e; /* Subtle accent border */
+    transform: scale(1.05); /* Slight grow effect */
+}
+
+
+/***************
+    Header
+***************/
+
+.page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #2A2A2A; /* Match your background color */
+    color: #ffffff;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .page-header .back-home {
+    text-decoration: none; /* Remove underline */
+    color: #49bf9e; /* Accent color */
+    font-family: 'Futura', sans-serif; /* Match your font */
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .page-header .back-home:hover {
+    color: #ffffff; /* Change color on hover */
+  }
+
+  
+/**********
+    Core
+**********/
+
+.box {
+    width: 150px;
+    height: 150px;
+    margin: 50px auto;
+    display: flex; /* Center content inside */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff; /* White text for visibility */
+    font-family: 'Futura', sans-serif; /* Match button font */
+    font-size: 18px;
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #ffffff; /* Thin white border */
+    border-radius: 6px; /* Subtle rounding for modern look */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth hover effects */
+}
+
+
+/************************
+    scrollTrigger
+************************/
+  
+  /* Progress Bar Styles */
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background: #49bf9e;
+    width: 0;
+    z-index: 1000;
+  }
+  
+  .fade-in {
+    height: 100vh; /* Full viewport height */
+    background: url('../images/lampe01.webp') center / cover no-repeat; /* Set background image */
+    background-color: red; 
+    opacity: 0; /* Hidden initially */
+    transform: translateY(50px); /* Start slightly below */
+    display: flex; /* Center content */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Make text readable */
+    padding: 20px;
+    border-radius: 8px; /* Optional for rounded corners */
+  }
+  
+  
+  
+  
+  
+
+/************************
+        Footer
+************************/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0 100px 0;
+}
+  
