@@ -79,11 +79,14 @@ ScrollTrigger.create({
 
 ScrollTrigger.create({
     trigger: ".whitespace",
-    start: "top 20%",
+    start: "top 50%", // Adjust the start position as needed
     end: "bottom bottom",
     scrub: 1,
+    markers: true, // Add markers to visualize the trigger points
     onUpdate: (self) => {
-        const scale = 1 + 12 * self.progress;
+        const scaleX = window.innerWidth / 120; // Calculate scale factor based on initial width
+        const scaleY = window.innerHeight / 120; // Calculate scale factor based on initial height
+        const scale = 1 + (Math.max(scaleX, scaleY) - 1) * self.progress; // Scale proportionally
         gsap.to(".revealer", {
             scale: scale,
             ease: "none",
