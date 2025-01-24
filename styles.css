@@ -87,7 +87,7 @@ a.button:hover {
     Core
 **********/
 
-.box {
+.coreBox {
     width: 150px;
     height: 150px;
     margin: 50px auto;
@@ -104,77 +104,7 @@ a.button:hover {
     cursor: pointer;
     transition: all 0.3s ease; /* Smooth hover effects */
 }
-
-
-/************************
-    scrollTrigger
-************************/
   
-/* Progress Bar */
-.progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 5px;
-  background: #49bf9e;
-  width: 0;
-  z-index: 999;
-}
-
-/* Sections */
-section {
-  padding: 50px 20px;
-  margin: 50 auto;
-  max-width: 800px;
-  text-align: center;
-}
-
-.hero {
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.fade-in {
-  height: 50vh; /* Full viewport height for scrolling */
-  opacity: 1; /* Temporarily set to 1 to check visibility */
-  transform: none; /* Remove transformation temporarily */
-  background-color: #2A2A3A; /* Add a background color for visibility */
-  color: white; /* Ensure text is readable */
-  display: flex;
-  flex-direction: column;
-  padding: 50px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-
-.parallax {
-  height: 100vh;
-  background: url('../images/lampe01.webp') center / cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.animated-text {
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white; /* Text color for readability */
-}
-
-.animated-text h2 span {
-  display: inline-block; /* Make letters animatable */
-  opacity: 0; /* Start hidden */
-  transform: translateY(20px); /* Offset for animation */
-}
 
 /************************
         Draggable
@@ -292,6 +222,36 @@ section {
   transform: translateY(20px);
 }
 
+/************************
+    scrollTrigger
+************************/
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 300px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  opacity: 1; /* Ensure visibility */
+  transform: scale(1); /* Ensure proper scale */
+}
+
+.box.a {
+  background-color: #FF5733; /* Red */
+}
+
+.box.b {
+  background-color: #33FF57; /* Green */
+}
+
+.box.c {
+  background-color: #3357FF; /* Blue */
+}
 
 /************************
         Footer
