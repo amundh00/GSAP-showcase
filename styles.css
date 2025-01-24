@@ -19,9 +19,9 @@ body {
     overflow: hidden;
 }
 
-
-
-
+section, div {
+  margin: 50px 0; /* Add spacing between sections */
+}
 
 main{
     display: flex;
@@ -29,6 +29,7 @@ main{
     justify-content: center;
     align-items: center;
     margin-top: 15%;
+    padding: 0 10% 0 10%;
 }
 
 a.button {
@@ -109,47 +110,140 @@ a.button:hover {
     scrollTrigger
 ************************/
   
-  /* Progress Bar Styles */
-  .progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 5px;
-    background: #49bf9e;
-    width: 0;
-    z-index: 1000;
-  }
-  
-  .fade-in {
-    height: 100vh; /* Full viewport height */
-    background: url('../images/lampe01.webp') center / cover no-repeat; /* Set background image */
-    background-color: red; 
-    opacity: 0; /* Hidden initially */
-    transform: translateY(50px); /* Start slightly below */
-    display: flex; /* Center content */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white; /* Make text readable */
-    padding: 20px;
-    border-radius: 8px; /* Optional for rounded corners */
-  }
-  
-  
-  
-  
-  
+/* Progress Bar */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: #49bf9e;
+  width: 0;
+  z-index: 999;
+}
+
+/* Sections */
+section {
+  padding: 50px 20px;
+  margin: 50 auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.hero {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fade-in {
+  height: 50vh; /* Full viewport height for scrolling */
+  opacity: 1; /* Temporarily set to 1 to check visibility */
+  transform: none; /* Remove transformation temporarily */
+  background-color: #2A2A3A; /* Add a background color for visibility */
+  color: white; /* Ensure text is readable */
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.parallax {
+  height: 100vh;
+  background: url('../images/lampe01.webp') center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.animated-text {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white; /* Text color for readability */
+}
+
+.animated-text h2 span {
+  display: inline-block; /* Make letters animatable */
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Offset for animation */
+}
+
+/************************
+        Draggable
+************************/
+
+.draggable-box {
+  z-index: 6;
+  width: 150px;
+  height: 150px;
+  background-color: #49bf9e; /* Box color */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px; /* Rounded corners */
+  font-family: 'Futura', sans-serif;
+  font-size: 16px;
+  cursor: grab;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: box-shadow 0.3s ease;
+}
+
+.draggable-box:active {
+  cursor: grabbing;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Add depth on grab */
+}
+
+.axis-draggable-section {
+  z-index: 4;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: space-around; /* Space the boxes evenly */
+  align-items: center; /* Align vertically */
+  background-color: #0b79d9; /* Background color for contrast */
+}
+
+.horizontal-box, .vertical-box {
+  z-index: 5;
+  width: 150px;
+  height: 150px;
+  background-color: #49bf9e; /* Box color */
+  color: white; /* Text color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px; /* Rounded corners */
+  font-family: 'Futura', sans-serif;
+  font-size: 16px;
+  cursor: grab;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.horizontal-box:active, .vertical-box:active {
+  cursor: grabbing;
+}
+
+
+
 
 /************************
         Footer
 ************************/
 
-footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 100px 0 100px 0;
+footer {
+  background-color: #2A2A2A;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px; /* Add spacing above the footer */
 }
+
   
