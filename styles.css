@@ -226,32 +226,23 @@ a.button:hover {
     scrollTrigger
 ************************/
 
-.box {
-  width: 100px;
-  height: 100px;
-  margin: 300px auto;
+.section {
+  height: 100vh; /* Full viewport height */
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: 24px;
+  align-items: center;
+  font-size: 3rem;
   color: white;
+  text-transform: uppercase;
+  font-weight: bold;
   text-align: center;
-  border-radius: 10px;
-  opacity: 1; /* Ensure visibility */
-  transform: scale(1); /* Ensure proper scale */
 }
 
-.box.a {
-  background-color: #FF5733; /* Red */
-}
-
-.box.b {
-  background-color: #33FF57; /* Green */
-}
-
-.box.c {
-  background-color: #3357FF; /* Blue */
-}
+.page1 { background: #1e3a8a; }
+.page2 { background: #0f766e; }
+.page3 { background: #d97706; }
+.page4 { background: #b91c1c; }
 
 /************************
         Footer
