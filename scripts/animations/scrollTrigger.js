@@ -1,7 +1,7 @@
+// Initialize Lenis for smooth scrolling
 const lenis = new Lenis();
 
 lenis.on("scroll", ScrollTrigger.update);
-
 
 gsap.ticker.add((time) => {
     lenis.raf(time * 1000);
@@ -11,6 +11,19 @@ gsap.ticker.lagSmoothing(0);
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Hero image scroll effect
+gsap.to(".hero", {
+    backgroundPositionY: "0",
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: 1,
+    },
+});
+
+// Existing ScrollTriggers
 ScrollTrigger.create({
     trigger: ".pinned",
     start: "top top",
@@ -53,10 +66,10 @@ ScrollTrigger.create({
     ${55 + 45 * progress}% ${100 - 0 * progress}%,
     ${45 - 45 * progress}% ${100 - 0 * progress}%
     )`;
-    gsap.to(".revealer-1, .revealer-2", {
-        clipPath: clipPath,
-        ease: "none",
-        duration: 0,
+        gsap.to(".revealer-1, .revealer-2", {
+            clipPath: clipPath,
+            ease: "none",
+            duration: 0,
         });
     },
 });
@@ -82,7 +95,6 @@ ScrollTrigger.create({
     start: "top 50%", // Adjust the start position as needed
     end: "bottom bottom",
     scrub: 1,
-    markers: true, // Add markers to visualize the trigger points
     onUpdate: (self) => {
         const scaleX = window.innerWidth / 120; // Calculate scale factor based on initial width
         const scaleY = window.innerHeight / 120; // Calculate scale factor based on initial height

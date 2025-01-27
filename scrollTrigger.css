@@ -30,7 +30,7 @@ h2 {
 section.hero {
     width: 100vw;
     height: 100vh;
-    background: url(../images/hero.jpg) no-repeat 50% 50%; 
+    background: url(../images/hero.jpg) no-repeat 50% 50%;
     background-size: cover;
     display: flex;
     justify-content: center;
